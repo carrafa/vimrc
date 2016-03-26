@@ -82,8 +82,8 @@ let g:syntastic_check_on_wq = 0
 "-------------------------------------------------
 " NERDTree stuff
 "-------------------------------------------------
-autocmd vimenter * NERDTree
 map <C-m> :NERDTreeToggle<CR>
+autocmd vimenter * if argc() == 0 | :NERDTreeToggle | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 set modifiable
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -104,3 +104,4 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
   call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
   call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
   call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
