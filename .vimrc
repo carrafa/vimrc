@@ -1,7 +1,6 @@
 execute pathogen#infect()
 syntax enable
 filetype plugin indent on
-filetype plugin on
 
 set expandtab
 
