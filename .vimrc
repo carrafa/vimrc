@@ -61,9 +61,10 @@ set nu
 "-------------------------------------------------
 " color scheme stuff
 "-------------------------------------------------
-"let g:solarized_termcolors=256
 colorscheme gruvbox
+let g:gruvbox_contrast_light = "hard"
 set background=dark
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 "-------------------------------------------------
 " syntastic stuff
@@ -103,4 +104,3 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
   call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
   call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
   call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-
